@@ -6,9 +6,10 @@
 // object. The function should return the whole playlist.
 // 4. Create a function `removeFromPlaylist` which accepts two arguments (the playlist object and the artist name). The
 // body of the function should delete the key-value pair from the playlist and return the updated playlist.
-var playlist = {};
+var playlist = {artist: song};
 
 function updatePlaylist(playlist, artist, song) {
+  playlist["artist"] = playlist[artist];
   playlist[artist] = song;
   return playlist;
 }
